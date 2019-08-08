@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApi.Models;
 
 namespace WebApi.Data
 {
@@ -17,7 +19,12 @@ namespace WebApi.Data
         public void SeedUsers()
         {
             var userData = System.IO.File.ReadAllText("Data/UserSeedData.json");
+            var users = JsonConvert.DeserializeObject<List<User>>(userData);
+            foreach (var user in users)
+            {
+                byte[] passwordHash, passwordSalt;
 
+            }
 
         }
 
