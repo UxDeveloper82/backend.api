@@ -2,15 +2,27 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20190515131420_InitialCreate.cs" />
+    <Compile Remove="Migrations\20190515133057_AddItems.cs" />
+    <Compile Remove="Migrations\20190517014327_AddRepairs.cs" />
+    <Compile Remove="Migrations\20190517015948_AddDays.cs" />
+    <Compile Remove="Migrations\20190630194701_AddContactsDb.cs" />
+    <Compile Remove="Migrations\20190630200815_AddContactsDb.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
 
 </Project>
